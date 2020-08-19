@@ -52,9 +52,9 @@ jobs:
         key: ${{ secrets.AWS_KEY }}
         port: ${{ secrets.AWS_PORT }}
         script: |
-          docker pull sundayoyeniyi/spring-starter:1.0.1
-          docker run -d --name webservice-greeting --port 8081:8080 sundayoyeniyi/spring-starter:1.0.1
-          docker ps
+          sudo docker pull sundayoyeniyi/spring-starter:1.0.1
+          sudo docker run -d --name webservice-greeting --port 8081:8080 sundayoyeniyi/spring-starter:1.0.1
+          sudo docker ps
         
     # - name: Execution de la commande ssh sur le serveur à deployer
     #   uses: appleboy/ssh-action@master
